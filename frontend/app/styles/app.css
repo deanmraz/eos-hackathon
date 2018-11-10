@@ -1,0 +1,32 @@
+@tailwind preflight;
+@tailwind components;
+/** custom css/components here **/
+html {
+  @apply h-full;
+}
+
+body {
+  @apply w-full h-full max-h-full max-w-full;
+  min-width: 320px;
+
+  > .ember-view {
+    @apply w-full h-full;
+  }
+}
+
+.ios-margin {
+  margin-top: constant(safe-area-inset-top);
+  margin-top: env(safe-area-inset-top);
+}
+
+.ios-padding {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+
+
+.disabled {
+  @apply opacity-50 select-none;
+}
+
+@tailwind utilities;
