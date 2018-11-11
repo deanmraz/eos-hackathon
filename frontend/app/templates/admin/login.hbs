@@ -1,13 +1,13 @@
 <div class="w-screen h-screen p-4 flex flex-col justify-center items-center bg-grey-lighter">
   <form class="w-full max-w-xs bg-white border rounded shadow p-4">
     <div class="md:flex md:items-center mb-6">
-      <input class="bg-grey-lighter appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-black" id="inline-full-name" type="text" placeholder="Username">
+      {{input class="bg-grey-lighter appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-black" type="text" placeholder="Username" value=data.username }}
     </div>
     <div class="md:flex md:items-center mb-6">
-      <input class="bg-grey-lighter appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-black" id="inline-username" type="password"  placeholder="Password">
+      {{input class="bg-grey-lighter appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-black" type="password"  placeholder="Password" value=data.username }}
     </div>
     <div class="md:flex md:items-center">
-      <button class="w-full shadow bg-black hover:bg-black-light focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+      <button class="w-full shadow bg-black hover:bg-black-light focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button" onclick={{perform authenticate}}>
         Authenticate
       </button>
     </div>

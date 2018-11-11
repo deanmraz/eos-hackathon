@@ -5,7 +5,9 @@ export default Route.extend({
   userSession: service(),
   beforeModel() {
     const { username, password } = this.get('userSession.auth');
-    if (!username || !password) {
+    if (username && password) {
+      this.transitionTo('admin.clips');
+    } else {
       this.transitionTo('admin.login');
     }
   }

@@ -8,6 +8,36 @@ const endpoint = `http://192.168.99.100:8888`;
 export default Service.extend({
   userSession: service(),
 
+  authenticate: task(function * (username, password) {
+    const rpc = new Rpc.JsonRpc(endpoint);
+    const signatureProvider = new SignatureProvider([password]);
+    const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), textEncoder: new TextEncoder() });
+
+    const actionData = {
+      account: contract,
+      name: 'authenticate',
+      authorization: [{
+        actor: username,
+        permission: 'active',
+      }],
+    };
+    // console.log(actionData);
+
+    // Main call to blockchain after setting action, account_name and data
+    try {
+      const resultWithConfig = yield api.transact({
+        actions: [actionData]
+      }, {
+        blocksBehind: 3,
+        expireSeconds: 30,
+      });
+      console.log(resultWithConfig);
+      return resultWithConfig;
+    } catch (err) {
+      throw(err)
+    }
+  }),
+
   push: task(function * (action, data) {
     const { username, password } = this.get('userSession.auth');
     data.key = username;
