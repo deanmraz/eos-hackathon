@@ -8,10 +8,10 @@ html {
 body {
   @apply w-full h-full max-h-full max-w-full;
   min-width: 320px;
+}
 
-  > .ember-view {
-    @apply w-full h-full;
-  }
+body > .ember-view {
+  @apply w-full h-full;
 }
 
 .ios-margin {

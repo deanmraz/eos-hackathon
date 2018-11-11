@@ -7,6 +7,14 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('admin', function() {
+    this.route('login');
+    this.route('clips', function() {
+      this.route('create');
+      this.route('edit', { path: '/:edit_id' });
+    });
+  });
+  this.route('app');
 });
 
 export default Router;
