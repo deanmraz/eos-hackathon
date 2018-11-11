@@ -12,5 +12,13 @@ export default Controller.extend({
     yield push.perform('update', data);
     yield timeout(1000);
     this.get('router').transitionTo('admin.clips.index');
+  }),
+
+  del: task(function * () {
+    const data = this.get('model');
+    const push = this.get('eos.push');
+    yield push.perform('del', data);
+    yield timeout(1000);
+    this.get('router').transitionTo('admin.clips.index');
   })
 });

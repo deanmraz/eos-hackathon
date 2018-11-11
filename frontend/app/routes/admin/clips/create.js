@@ -1,5 +1,6 @@
 import Route from '@ember/routing/route';
 import EmberObject from '@ember/object';
+import moment from 'moment';
 
 export default Route.extend({
   model() {
@@ -8,7 +9,7 @@ export default Route.extend({
       description: null,
       image: null,
       video: null,
-      date: null,
+      date: moment().toISOString(),
     })
   }
 });

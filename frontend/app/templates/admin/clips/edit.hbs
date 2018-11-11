@@ -1,1 +1,8 @@
-{{form-clip model=model save=save saveName="Update"}}
+
+{{form-clip model=model save=save saveName="Update" del=del}}
+
+{{#ember-wormhole to="back"}}
+  {{#link-to "admin.clips.index" class="no-underline text-white"}}
+    {{fa-icon "chevron-left"}}
+  {{/link-to}}
+{{/ember-wormhole}}

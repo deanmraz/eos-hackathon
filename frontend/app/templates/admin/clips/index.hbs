@@ -1,9 +1,15 @@
-<div class="container w-full m-auto pt-32 px-2 flex flex-col items-center">
+<div class="container w-full m-auto pt-16 px-2 flex flex-col items-center">
   {{!-- <ul class="list-reset w-full text-lg border border-grey-light rounded my-4">
     <li class="border-b border-grey-light p-2">One</li>
     <li class="border-b border-grey-light p-2">Two</li>
     <li class="border-b border-grey-light p-2">Three</li>
   </ul> --}}
+
+  <div class="w-full h-2"></div>
+
+  {{#link-to "admin.clips.create" class="w-full shadow bg-blue-dark hover:bg-black-light focus:shadow-outline focus:outline-none text-white font-bold p-4 rounded no-underline text-center max-w-sm" tagName="button" }}
+    Create
+  {{/link-to}}
 
   {{#each sorted as |item|}}
     {{sport-clip class="my-2" data=item}}

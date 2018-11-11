@@ -29,4 +29,8 @@ body > .ember-view {
   @apply opacity-50 select-none;
 }
 
+.font-headline {
+  font-family: 'Pacifico', cursive;
+}
+
 @tailwind utilities;
