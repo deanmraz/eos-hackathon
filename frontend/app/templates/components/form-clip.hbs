@@ -14,7 +14,7 @@
     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
       Id
     </label>
-    {{input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" value=model.id}}
+    {{input class="appearance-none shadow-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" value=model.id}}
   </div>
   {{else}}
   <div class="w-full h-8"></div>
@@ -23,31 +23,31 @@
     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
       Title
     </label>
-    {{input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" value=model.title}}
+    {{input class="appearance-none shadow-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" value=model.title}}
   </div>
   <div class="w-full">
     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
       image
     </label>
-    {{input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" value=model.image}}
+    {{input class="appearance-none shadow-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" value=model.image}}
   </div>
   <div class="w-full">
     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
       video
     </label>
-    {{input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" value=model.video}}
+    {{input class="appearance-none shadow-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" value=model.video}}
   </div>
   <div class="w-full">
     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
       date
     </label>
-    {{input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" value=model.date}}
+    {{input class="appearance-none shadow-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" value=model.date}}
   </div>
   <div class="w-full">
     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
       description
     </label>
-    {{textarea rows=10 class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" value=model.description}}
+    {{textarea rows=10 class="appearance-none shadow-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" value=model.description}}
   </div>
   <button class="w-full shadow bg-blue-dark hover:bg-black-light focus:shadow-outline focus:outline-none text-white font-bold p-4 rounded" type="button" onclick={{perform save}}>
     {{if save.isRunning 'Loading...' saveName}}

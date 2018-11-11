@@ -4,7 +4,7 @@ import InViewportMixin from 'ember-in-viewport';
 
 export default Component.extend(InViewportMixin, {
   router: service(),
-  classNames: ["max-w-sm", "rounded", "overflow-hidden", "shadow-lg", "w-full"],
+  classNames: ["max-w-sm", "rounded", "overflow-hidden", "shadow-md", "w-full"],
 
   click() {
     const id = this.get('data.id');

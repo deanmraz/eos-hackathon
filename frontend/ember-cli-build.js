@@ -11,6 +11,10 @@ let app = new EmberApp(defaults, {
         tailwindCSS('./config/tailwind.js')
       ]
     }
+  },
+  autoprefixer: {
+    browsers: ['last 2 ios version'],
+    cascade: false
   }
 });
 
