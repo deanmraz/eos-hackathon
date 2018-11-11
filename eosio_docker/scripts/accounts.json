@@ -1,0 +1,17 @@
+[
+  {
+    "name": "ufc",
+    "privateKey": "5KFyaxQW8L6uXFB6wSgC44EsAbzC7ideyhhQ68tiYfdKQp69xKo",
+    "publicKey": "EOS8Du668rSVDE3KkmhwKkmAyxdBd73B51FKE7SjkKe5YERBULMrw"
+  },
+  {
+    "name": "f1",
+    "privateKey": "5KXxQfvdnwmQS8JThzvGWzpMgXinjNhrcNykAH3iPjLLMHmLBLq",
+    "publicKey": "EOS5nKCKBQQahZcXiMHmRHmvqnfi87jjkqz5BVAZ4usgwmAoLGyEg"
+  },
+  {
+    "name": "mlb",
+    "privateKey": "5Jj2DoYoyQpEgGpHfcsbQqTVmGavBoY2oxncUp9x7agutAvJDzo",
+    "publicKey": "EOS77iFd3o3JTBsvLnyHEYn2w8TGwKBCPKiFMweHT4krqpqh77iNE"
+  }
+]
