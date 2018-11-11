@@ -1,5 +1,5 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Sun Nov 11 00:54:50 2018",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Sun Nov 11 09:57:36 2018",
     "version": "eosio::abi/1.0",
     "structs": [
         {
@@ -113,6 +113,20 @@
                     "type": "string"
                 }
             ]
+        },
+        {
+            "name": "view",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "id",
+                    "type": "uint64"
+                }
+            ]
         }
     ],
     "types": [],
@@ -130,6 +144,11 @@
         {
             "name": "update",
             "type": "update",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "view",
+            "type": "view",
             "ricardian_contract": ""
         }
     ],

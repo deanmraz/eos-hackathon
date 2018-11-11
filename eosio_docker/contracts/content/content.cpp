@@ -62,6 +62,12 @@ public:
     contentclips.erase(iterator);
   }
 
+  [[eosio::action]]
+  void view(name user, uint64_t id) {
+    require_auth(user);
+    print( "viewed!");
+  }
+
 private:
   struct [[eosio::table]] clip {
     uint64_t id;
@@ -78,4 +84,4 @@ private:
 
 };
 
-EOSIO_DISPATCH( content, (create)(update)(del))
+EOSIO_DISPATCH( content, (create)(update)(del)(view))

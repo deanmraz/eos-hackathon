@@ -42,7 +42,7 @@ export default Service.extend({
     } catch (err) {
       throw(err)
     }
-  }),
+  }).enqueue(),
 
   push: task(function * (action, data) {
     const { username, password } = this.get('userSession.auth');
@@ -88,7 +88,7 @@ export default Service.extend({
     } catch (err) {
       throw(err)
     }
-  }),
+  }).enqueue(),
 
   all: task(function * () {
     try {
@@ -107,7 +107,7 @@ export default Service.extend({
     } catch (err) {
       console.error(err);
     }
-  }),
+  }).enqueue(),
 
   find: task(function * (id) {
     try {
@@ -126,6 +126,6 @@ export default Service.extend({
     } catch (err) {
       console.error(err);
     }
-  }),
+  }).enqueue(),
 
 });
