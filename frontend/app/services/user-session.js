@@ -6,8 +6,8 @@ export default Service.extend({
   //TODO use something like scatter
   auth: computed(function() {
     return EmberObject.create({
-      username: 'ufc',
-      password: '5KFyaxQW8L6uXFB6wSgC44EsAbzC7ideyhhQ68tiYfdKQp69xKo',
+      username: 'nfl',
+      password: '5Kd2Syqvirnc2JhwG88X6LYGYq8U8NaSRmtJL4u9xKSyGZBQGuu',
     })
   }),
   // auth: storageFor('auth')
