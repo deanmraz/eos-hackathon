@@ -1,13 +1,16 @@
-{{#if showVideo}}
-  {{#if data.image}}
-  <img class="w-full border-0" src={{data.image}} style="height: 300px">
+
+{{#unless hideMedia}}
+  {{#if showVideo}}
+    {{#if data.image}}
+    <img class="w-full border-0" src={{data.image}} style="height: 300px">
+    {{/if}}
+    {{#if data.video}}
+    <iframe class="w-full border-0" src={{data.video}} style="height: 300px"></iframe>
+    {{/if}}
+  {{else}}
+    <div class="w-full bg-black" style="height: 300px"></div>
   {{/if}}
-  {{#if data.video}}
-  <iframe class="w-full border-0" src={{data.video}} style="height: 300px"></iframe>
-  {{/if}}
-{{else}}
-  <div class="w-full bg-black" style="height: 300px"></div>
-{{/if}}
+{{/unless}}
 <div class="px-6 py-4">
   <div class="mb-2 text-grey text-right text-sm">{{moment-from-now data.date}}</div>
   <div class="font-bold text-xl mb-2 text-black">{{data.title}}</div>
