@@ -26,11 +26,15 @@ export PATH=$PATH:~/bin
 
 # unlock the wallet, ignore error if already unlocked
 cleos wallet unlock -n eosiomain --password $(cat /mnt/dev/data/eosiomain_wallet_password.txt) || true;
+cleos wallet unlock -n orgs --password $(cat /mnt/dev/data/orgs_wallet_password.txt) || true;
 
 jq -c '.[]' accounts.json | while read i; do
   name=$(jq -r '.name' <<< "$i")
   pub=$(jq -r '.publicKey' <<< "$i")
+  priv=$(jq -r '.privateKey' <<< "$i")
 
   # to simplify, we use the same key for owner and active key of each account
   cleos create account eosio $name $pub $pub
+
+  cleos wallet import --private-key $priv -n orgs
 done

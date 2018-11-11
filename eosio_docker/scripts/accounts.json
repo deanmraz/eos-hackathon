@@ -10,8 +10,23 @@
     "publicKey": "EOS5nKCKBQQahZcXiMHmRHmvqnfi87jjkqz5BVAZ4usgwmAoLGyEg"
   },
   {
-    "name": "mlb",
+    "name": "pride",
     "privateKey": "5Jj2DoYoyQpEgGpHfcsbQqTVmGavBoY2oxncUp9x7agutAvJDzo",
     "publicKey": "EOS77iFd3o3JTBsvLnyHEYn2w8TGwKBCPKiFMweHT4krqpqh77iNE"
+  },
+  {
+    "name": "onefc",
+    "privateKey": "5JafEsVudvFomswyrWvN5B98bxXV94T7BfaXjWADncRhVQaGGmi",
+    "publicKey": "EOS6iuYrdB9mQ9RakEqMjdkU2mCqUxkGaM85q5xFWY4qzqpkFSmTP"
+  },
+  {
+    "name": "nba",
+    "privateKey": "5KYXVZykXtMAxp4s7TbQFP68y7ViXxcpmwG3kvsQFjdjSBgTpP8",
+    "publicKey": "EOS6Qhq742QcPNQGt8X3TNcCeBQJ9vnvScrYJ8okzuq3LrQtdN5Xz"
+  },
+  {
+    "name": "nfl",
+    "privateKey": "5Kd2Syqvirnc2JhwG88X6LYGYq8U8NaSRmtJL4u9xKSyGZBQGuu",
+    "publicKey": "EOS7SAtYYVkkNnP21Ng5h3VyYUp7DmUAzFPtxVorSwds6PoXs9Re8"
   }
 ]

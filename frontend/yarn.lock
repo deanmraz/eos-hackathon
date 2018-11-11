@@ -4210,6 +4210,13 @@ ember-hammertime@^1.6.0:
     ember-get-config "^0.2.4"
     hammer-timejs "^1.1.0"
 
+ember-in-viewport@^3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/ember-in-viewport/-/ember-in-viewport-3.1.5.tgz#83fc16b8bc132d71dc7955f45e52643861c9b69a"
+  integrity sha512-YcZzbzLtpuqmazLirqqvip21bch/HuVRseaplapO8jt68g/nYOgp5ZnITIkCVEw1y3Yn4iUbEoTqSYYvvdSD3g==
+  dependencies:
+    ember-cli-babel "^6.16.0"
+
 ember-inflector@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/ember-inflector/-/ember-inflector-3.0.0.tgz#7e1ee8aaa0fa773ba0905d8b7c0786354d890ee1"

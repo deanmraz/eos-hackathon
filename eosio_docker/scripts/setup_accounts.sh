@@ -15,6 +15,10 @@ cleos wallet import -n sclipswal --private-key 5JpWT4ehouB2FF9aCfdfnZ5AwbQbTtHBA
 # create account for sclipsacc with above wallet's public keys
 cleos create account eosio sclipsacc EOS6PUh9rs7eddJNzqgqDx1QrspSHLRxLMcRdwHZZRL4tpbtvia5B EOS6PUh9rs7eddJNzqgqDx1QrspSHLRxLMcRdwHZZRL4tpbtvia5B
 
+echo "=== setup wallet: Default Organization Wallet ==="
+# key for eosio account and export the generated password to a file for unlocking wallet later
+cleos wallet create -n orgs --to-console | tail -1 | sed -e 's/^"//' -e 's/"$//' > /mnt/dev/data/orgs_wallet_password.txt
+
 # echo "=== deploy smart contract ==="
 # deploy_contract.sh
 
