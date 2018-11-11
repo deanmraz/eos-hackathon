@@ -1,14 +1,20 @@
 import Service, { inject as service } from '@ember/service';
 import { Api, Rpc, SignatureProvider } from 'eosjs';
 import { task } from 'ember-concurrency';
+import { getOwner } from '@ember/application';
+import { computed } from '@ember/object';
 
 const contract = `sclipsacc`;
-const endpoint = `http://192.168.99.100:8888`;
 
 export default Service.extend({
   userSession: service(),
 
+  endpoint: computed(function() {
+    return getOwner(this).resolveRegistration(`config:environment`).APP.EOS_ENDPOINT;
+  }),
+
   authenticate: task(function * (username, password) {
+    const endpoint = this.get('endpoint');
     const rpc = new Rpc.JsonRpc(endpoint);
     const signatureProvider = new SignatureProvider([password]);
     const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), textEncoder: new TextEncoder() });
@@ -41,6 +47,7 @@ export default Service.extend({
   push: task(function * (action, data) {
     const { username, password } = this.get('userSession.auth');
     data.key = username;
+    const endpoint = this.get('endpoint');
     const rpc = new Rpc.JsonRpc(endpoint);
     const signatureProvider = new SignatureProvider([password]);
     const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), textEncoder: new TextEncoder() });
@@ -85,6 +92,7 @@ export default Service.extend({
 
   all: task(function * () {
     try {
+      const endpoint = this.get('endpoint');
       const rpc = new Rpc.JsonRpc(endpoint);
       const result = yield rpc.get_table_rows({
         "json": true,
@@ -103,6 +111,7 @@ export default Service.extend({
 
   find: task(function * (id) {
     try {
+      const endpoint = this.get('endpoint');
       const rpc = new Rpc.JsonRpc(endpoint);
       const result = yield rpc.get_table_rows({
         "json": true,

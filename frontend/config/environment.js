@@ -20,6 +20,7 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      EOS_ENDPOINT: 'http://34.216.32.133:8888',
     }
   };
 
@@ -29,6 +30,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.EOS_ENDPOINT = 'http://192.168.99.100:8888';
   }
 
   if (environment === 'test') {
